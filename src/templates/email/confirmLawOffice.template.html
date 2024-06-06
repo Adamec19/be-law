@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f3f4f6;
+                color: #333;
+            }
+            .container {
+                max-width: 600px;
+                margin: 20px auto;
+                background: white;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+            .header {
+                color: #333;
+                text-align: center;
+                padding-bottom: 20px;
+                border-bottom: 2px solid #eee;
+            }
+            .header h2 {
+                font-size: 24px;
+                margin: 0;
+            }
+            .content {
+                font-size: 16px;
+                color: #555;
+                line-height: 1.5;
+                margin-top: 20px;
+            }
+            .footer {
+                margin-top: 20px;
+                text-align: center;
+                font-size: 12px;
+                color: #999;
+            }
+            .link {
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+                text-decoration: none;
+                color: #fff;
+                background-color: #0078d7;
+                padding: 12px 20px;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+            .link:hover {
+                background-color: #0056b3;
+            }
+            .info-block {
+                background-color: #f0f8ff;
+                border: 2px solid #00aaff;
+                border-radius: 8px;
+                padding: 16px;
+                margin: 20px 0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2>Nová advokátní kancelář ke schválení</h2>
+            </div>
+            <div class="content">
+                <p>Dobrý den,</p>
+                <p>
+                    do systému Dny otevřených dveří české advokacie přibyla nová
+                    advokátní kancelář ke schválení.
+                </p>
+                <p>Detaily kanceláře:</p>
+                <ul>
+                    <li><strong>Název společnosti:</strong> {{companyName}}</li>
+                    <li><strong>IČO:</strong> {{ico}}</li>
+                    <li><strong>Tel. číslo:</strong> {{phone}}</li>
+                    <li><strong>Email:</strong> {{email}}</li>
+                    <li><strong>Adresa:</strong> {{address}}</li>
+                    <li><strong>Region:</strong> {{regionName}}</li>
+                    <li><strong>Město:</strong> {{city}}</li>
+                    <li>
+                        <strong>Doprovodný program:</strong>
+                        {{supportingProgram}}
+                    </li>
+                    <li>
+                        <strong>Volná pracovní místa:</strong> {{freePlaces}}
+                    </li>
+                </ul>
+            </div>
+            <a
+                class="link"
+                href="https://goldfish-app-2-znqjr.ondigitalocean.app/api/law-office/email-callback/approved/{{hashId}}"
+                >Schválit</a
+            >
+
+            <div class="info-block">
+                <p>
+                    Pokud máte jakýkoliv otázky, prosím kontaktujte nás na
+                    email:
+                    <a href="mailto:valickova@brno-advokatnikancelar.cz"
+                        >valickova@brno-advokatnikancelar.cz</a
+                    >
+                </p>
+            </div>
+
+            <div class="footer">
+                S pozdravem,<br />
+                Dny otevřených dveří České advokacie
+            </div>
+        </div>
+    </body>
+</html>

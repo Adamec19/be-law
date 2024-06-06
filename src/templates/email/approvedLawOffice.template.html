@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f3f4f6;
+                color: #333;
+            }
+            .container {
+                max-width: 600px;
+                margin: 20px auto;
+                background: white;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+            .header {
+                color: #333;
+                text-align: center;
+                padding-bottom: 20px;
+                border-bottom: 2px solid #eee;
+                margin-bottom: 20px;
+            }
+            .header h2 {
+                font-size: 24px;
+                margin: 0;
+            }
+            .content {
+                font-size: 16px;
+                color: #555;
+                line-height: 1.5;
+            }
+            .footer {
+                margin-top: 20px;
+                text-align: center;
+                font-size: 12px;
+                color: #999;
+            }
+            .link {
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+                text-decoration: none;
+                color: #333;
+                background-color: #ffd966;
+                padding: 10px 20px;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+            .link:hover {
+                background-color: #e0c040;
+            }
+            .importantText {
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2>Děkujeme za vaše zapojení</h2>
+            </div>
+            <div class="content">
+                <p>Dobrý den,</p>
+                <p>
+                    potvrzujeme, že jste byli zapojeni do projektu Dny
+                    otevřených dveří české advokacie!
+                </p>
+                <p>Zde jsou vaše zadané údaje:</p>
+                <ul>
+                    <li><strong>Název společnosti:</strong> {{companyName}}</li>
+                    <li><strong>IČO:</strong> {{ico}}</li>
+                    <li><strong>Tel. číslo:</strong> {{phone}}</li>
+                    <li><strong>Email:</strong> {{email}}</li>
+                    <li><strong>Adresa:</strong> {{address}}</li>
+                    <li><strong>Region:</strong> {{regionName}}</li>
+                    <li><strong>Město:</strong> {{city}}</li>
+                    <li>
+                        <strong>Návštěvní den:</strong> {{firstVisitingDate}}
+                    </li>
+                    <li>
+                        <strong>Druhý návštěvní den:</strong>
+                        {{secondVisitingDate}}
+                    </li>
+                    <li>
+                        <strong>Doprovodný program:</strong>
+                        {{supportingProgram}}
+                    </li>
+                    <li>
+                        <strong
+                            >Kontaktní e-mail pro doprovodný program:</strong
+                        >
+                        {{contactEmail}}
+                    </li>
+                    <li>
+                        <strong>Volná kapacita pro doprovodný program:</strong>
+                        {{freeCapacity}}
+                    </li>
+                    <li>
+                        <strong>Volná pracovní místa:</strong> {{freePlaces}}
+                    </li>
+                </ul>
+                <p class="importantText">
+                    <strong>Prosím, tento e-mail nemažte</strong>. Tlačítko
+                    Upravit vám bude sloužit ke změnám údajů či k zaznamenání
+                    plné obsazenosti vašeho doprovodného programu.
+                </p>
+                <a
+                    class="link yellow"
+                    href="https://www.poznejadvokaty.cz/uprava-advokatni-kancelare/{{hashId}}"
+                    >Upravit</a
+                >
+            </div>
+            <div class="footer">
+                S pozdravem,<br />
+                Tým XYZ
+            </div>
+        </div>
+    </body>
+</html>

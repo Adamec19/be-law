@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f3f4f6;
+                color: #333;
+            }
+            .container {
+                max-width: 600px;
+                margin: 20px auto;
+                background: white;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+            .header {
+                color: #333;
+                text-align: center;
+                padding-bottom: 20px;
+                border-bottom: 2px solid #eee;
+            }
+            .header h2 {
+                font-size: 24px;
+                margin: 0;
+            }
+            .content {
+                font-size: 16px;
+                color: #555;
+                line-height: 1.5;
+                margin-top: 20px;
+            }
+            .footer {
+                margin-top: 20px;
+                text-align: center;
+                font-size: 12px;
+                color: #999;
+            }
+            .buttons {
+                text-align: center;
+                margin-top: 20px;
+            }
+            .link {
+                display: inline-block;
+                text-decoration: none;
+                color: #333;
+                padding: 12px 20px;
+                border-radius: 5px;
+                margin: 0 10px;
+                transition: background-color 0.3s;
+            }
+            .green {
+                background-color: #d4edda;
+            }
+            .green:hover {
+                background-color: #c3e6cb;
+            }
+            .red {
+                background-color: #f8d7da;
+            }
+            .red:hover {
+                background-color: #f5c6cb;
+            }
+            .yellow {
+                background-color: #fff3cd;
+            }
+            .yellow:hover {
+                background-color: #ffeeba;
+            }
+            .importantText {
+                font-size: 18px;
+            }
+            .info-block {
+                background-color: #f0f8ff;
+                border: 2px solid #00aaff;
+                border-radius: 8px;
+                padding: 16px;
+                margin: 20px 0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2>Děkujeme za přidání pracovní pozice</h2>
+            </div>
+            <div class="content">
+                <p>Dobrý den,</p>
+                <p>
+                    právě jste úspěšně přidali pracovní nabídku. Její náhled
+                    vidíte níže:
+                </p>
+                <ul>
+                    <li><strong>Název firmy:</strong> {{companyName}}</li>
+                    <li><strong>Adresa firmy:</strong> {{companyAddress}}</li>
+                    <li><strong>Region:</strong> {{regionName}}</li>
+                    <li><strong>Kontaktní osoba:</strong> {{contactPerson}}</li>
+                    <li><strong>Email:</strong> {{contactEmail}}</li>
+                    <li><strong>Tel. číslo:</strong> {{contactPhone}}</li>
+                </ul>
+                <p>Informace o pracovní nabídce:</p>
+                <ul>
+                    <li>
+                        <strong>Nadpis pro pracovní pozice:</strong> {{title}}
+                    </li>
+                    <li>
+                        <strong>Název pracovní pozice:</strong> {{jobTitle}}
+                    </li>
+                    <li><strong>Popis práce:</strong> {{jobDescription}}</li>
+                    <li>
+                        <strong>Požadavky na uchazeče:</strong>
+                        {{otherConditions}}
+                    </li>
+                    <li>
+                        <strong>Pracovní doba:</strong>
+                        {{timeDemandName}}
+                    </li>
+                    <li><strong>Pracovní poměr:</strong> {{contractName}}</li>
+                    <li><strong>Pracovní místo:</strong> {{location}}</li>
+                    <li><strong>Hodinová mzda:</strong> {{hourSalary}}</li>
+                    <li><strong>Nástup:</strong> {{boardingDate}}</li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="importantText">
+                    <strong>Prosím, tento e-mail nemažte</strong>. Poslouží vám
+                    k editaci nebo smazání vašeho inzerátu.
+                </p>
+            </div>
+
+            <div class="buttons">
+                <a
+                    class="link green"
+                    href="https://goldfish-app-2-znqjr.ondigitalocean.app/api/job-position/email-callback/approved/{{hashId}}"
+                    >Schválit inzerát</a
+                >
+                <a
+                    class="link red"
+                    href="https://goldfish-app-2-znqjr.ondigitalocean.app/api/job-position/email-callback/delete/{{hashId}}"
+                    >Smazat inzerát</a
+                >
+                <a
+                    class="link yellow"
+                    href="https://www.poznejadvokaty.cz/uprava-pracovni-pozice/{{hashId}}"
+                    >Upravit inzerat</a
+                >
+            </div>
+
+            <div class="info-block">
+                <p>
+                    Pokud máte jakýkoliv otázky, prosím kontaktujte nás na
+                    email:
+                    <a href="mailto:valickova@brno-advokatnikancelar.cz"
+                        >valickova@brno-advokatnikancelar.cz</a
+                    >
+                </p>
+            </div>
+
+            <div class="footer">
+                S pozdravem,<br />
+                Dny otevřených dveří České advokacie
+            </div>
+        </div>
+    </body>
+</html>
